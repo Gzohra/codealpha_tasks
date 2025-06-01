@@ -1,4 +1,3 @@
-# CodeAlpha_Project_StockPortfolioTracker_GUI
 
 import tkinter as tk
 from tkinter import ttk, messagebox
@@ -77,9 +76,9 @@ qty_entry = tk.Entry(root)
 qty_entry.pack(pady=5)
 
 # Buttons
-tk.Button(root, text="➕ Add to Portfolio", command=add_to_portfolio, bg="lightgreen").pack(pady=10)
-tk.Button(root, text="💾 Save Portfolio as CSV", command=save_portfolio, bg="lightblue").pack(pady=5)
-tk.Button(root, text="❌ Exit", command=root.destroy, bg="tomato").pack(pady=5)
+tk.Button(root, text=" Add to Portfolio", command=add_to_portfolio, bg="lightgreen").pack(pady=10)
+tk.Button(root, text=" Save Portfolio as CSV", command=save_portfolio, bg="lightblue").pack(pady=5)
+tk.Button(root, text=" Exit", command=root.destroy, bg="tomato").pack(pady=5)
 
 # Summary area
 summary_text = tk.Text(root, height=15, width=45, state='disabled', bg="#f9f9f9")
