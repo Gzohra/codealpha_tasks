@@ -7,18 +7,18 @@ def get_response(user_input):
     user_input = user_input.lower().strip()
 
     responses = {
-        "hello": ["Hi there! 👋", "Hello! How can I assist you?", "Hey! What's up?"],
+        "hello": ["Hi there! ", "Hello! How can I assist you?", "Hey! What's up?"],
         "hi": ["Hello! How can I assist you?", "Hi! Need any help?", "Hey! How are you?"],
-        "how are you": ["I'm just a bot, but I'm doing great! 😊", "Doing well, thanks!", "I'm fine, how about you?"],
+        "how are you": ["I'm just a bot, but I'm doing great! ", "Doing well, thanks!", "I'm fine, how about you?"],
         "what is your name": ["I'm CodeAlphaBot, your Python chatbot.", "You can call me CodeAlphaBot."],
-        "bye": ["Goodbye! Have a great day! 👋", "See you later!", "Bye! Take care!"],
+        "bye": ["Goodbye! Have a great day! ", "See you later!", "Bye! Take care!"],
         "help": ["Try asking: 'hello', 'how are you', or 'bye'.", "You can say hi or ask my name!"]
     }
 
     for key in responses:
         if key in user_input:
             return random.choice(responses[key])
-    return "Sorry, I didn't understand that. ❓"
+    return "Sorry, I didn't understand that. "
 
 def get_timestamp():
     return time.strftime("[%I:%M %p] ")
@@ -51,9 +51,9 @@ def clear_chat():
 
 # Root Window
 root = tk.Tk()
-root.title("🤖 CodeAlpha Chatbot")
+root.title(" CodeAlpha Chatbot")
 root.geometry("420x550")
-root.configure(bg="#d6eaf8")  # soft sky blue
+root.configure(bg="#d6eaf8")  
 
 # Chat Area
 chat_area = scrolledtext.ScrolledText(root, wrap=tk.WORD, font=("Arial", 12), bg="white", fg="black", bd=2, relief="sunken")
@@ -61,7 +61,7 @@ chat_area.pack(padx=10, pady=10, fill=tk.BOTH, expand=True)
 chat_area.insert(tk.END, get_timestamp() + "Bot: Hello! I'm CodeAlphaBot. Type 'help' to get started.\n\n")
 chat_area.config(state=tk.DISABLED)
 
-# User Entry Field (light yellow)
+# User Entry Field 
 user_entry = tk.Entry(root, font=("Arial", 14), bg="#ECEBE7", fg="black", bd=2, relief="solid", insertbackground="black")
 user_entry.pack(padx=10, pady=(0,10), fill=tk.X)
 user_entry.bind("<Return>", send_message_event)
